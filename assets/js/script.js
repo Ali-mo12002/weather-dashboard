@@ -90,6 +90,7 @@ function displaySearchHistory() {
     historyList.innerHTML = '';
 
     // Display each search history item
+    if(searchHistory){
     searchHistory.forEach(city => {
         var listItem = document.createElement('li');
         listItem.textContent = city;
@@ -98,6 +99,7 @@ function displaySearchHistory() {
         });
         historyList.appendChild(listItem);
     });
+}
 }
 
 // Function to fetch weather data for a city
